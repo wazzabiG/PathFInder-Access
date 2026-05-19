@@ -55,4 +55,9 @@ class RegisterActivity : BaseActivity(), RegisterContract.View {
     override fun showRegistrationError(message: String) {
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
     }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        presenter.onDestroy()
+    }
 }

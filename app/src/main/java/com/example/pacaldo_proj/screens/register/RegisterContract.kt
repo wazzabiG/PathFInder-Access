@@ -15,5 +15,6 @@ interface RegisterContract {
             emergencyName: String, emergencyPhone: String,
             pass: String, repeatPass: String
         )
+        fun onDestroy()
     }
 }

@@ -44,4 +44,8 @@ class RegisterPresenter(private var view: RegisterContract.View?) : RegisterCont
         UserSession.currentUser = newUser
         view?.showRegistrationSuccess(newUser)
     }
+
+    override fun onDestroy() {
+        view = null
+    }
 }
