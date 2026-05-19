@@ -1,0 +1,482 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorBackground">
+
+    <!-- Emergency Header - dark red gradient, professional -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_emergency_header"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:paddingTop="22dp"
+        android:paddingBottom="20dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:elevation="6dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="EMERGENCY"
+                android:textSize="10sp"
+                android:textColor="#FFCDD2"
+                android:letterSpacing="0.16"
+                android:textStyle="bold"
+                android:layout_marginBottom="4dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Quick Response"
+                android:textSize="26sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:layout_marginBottom="4dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tap any button to call immediately"
+                android:textSize="13sp"
+                android:textColor="#FFCDD2"/>
+        </LinearLayout>
+
+        <!-- Large SOS icon -->
+        <TextView
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:gravity="center"
+            android:text="🚨"
+            android:textSize="32sp"
+            android:background="@drawable/bg_sos_icon_circle"
+            android:layout_marginStart="12dp"/>
+    </LinearLayout>
+
+    <!-- Scrollable content -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:paddingTop="20dp"
+            android:paddingBottom="16dp">
+
+            <!-- Section: Emergency Hotlines -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="NATIONAL HOTLINES"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                android:textColor="@color/colorPrimary"
+                android:letterSpacing="0.12"
+                android:layout_marginBottom="14dp"/>
+
+            <!-- 911 -->
+            <androidx.cardview.widget.CardView
+                xmlns:card="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                card:cardCornerRadius="16dp"
+                card:cardElevation="4dp"
+                card:cardBackgroundColor="#D32F2F"
+                android:layout_marginBottom="10dp">
+
+                <LinearLayout
+                    android:id="@+id/btnCall911"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:contentDescription="Call 911 national emergency">
+
+                    <TextView
+                        android:layout_width="44dp"
+                        android:layout_height="44dp"
+                        android:gravity="center"
+                        android:text="🚔"
+                        android:textSize="24sp"
+                        android:background="@drawable/bg_hotline_icon"/>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_marginStart="14dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="911 — National Emergency"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:textColor="#FFFFFF"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Police · Fire · Medical"
+                            android:textSize="12sp"
+                            android:textColor="#FFCDD2"/>
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="CALL"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:textColor="#FFFFFF"
+                        android:letterSpacing="0.08"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Red Cross -->
+            <androidx.cardview.widget.CardView
+                xmlns:card1="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                card1:cardCornerRadius="16dp"
+                card1:cardElevation="3dp"
+                card1:cardBackgroundColor="@color/colorSurface"
+                android:layout_marginBottom="10dp">
+
+                <LinearLayout
+                    android:id="@+id/btnCallRed"
+                    android:layout_width="match_parent"
+                    android:layout_height="64dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:contentDescription="Call 143 Philippine Red Cross">
+
+                    <TextView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:gravity="center"
+                        android:text="🏥"
+                        android:textSize="22sp"
+                        android:background="@drawable/bg_hotline_icon_light"/>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_marginStart="14dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="143 — Philippine Red Cross"
+                            android:textSize="15sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorOnSurface"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Medical emergency, disaster relief"
+                            android:textSize="12sp"
+                            android:textColor="@color/colorOnSurfaceVariant"/>
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="CALL"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:textColor="#C62828"
+                        android:letterSpacing="0.08"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- PNP -->
+            <androidx.cardview.widget.CardView
+                xmlns:card2="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                card2:cardCornerRadius="16dp"
+                card2:cardElevation="3dp"
+                card2:cardBackgroundColor="@color/colorSurface"
+                android:layout_marginBottom="10dp">
+
+                <LinearLayout
+                    android:id="@+id/btnCallPNP"
+                    android:layout_width="match_parent"
+                    android:layout_height="64dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:contentDescription="Call 117 PNP Hotline">
+
+                    <TextView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:gravity="center"
+                        android:text="🚔"
+                        android:textSize="22sp"
+                        android:background="@drawable/bg_hotline_icon_light"/>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_marginStart="14dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="117 — PNP Hotline"
+                            android:textSize="15sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorOnSurface"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Philippine National Police"
+                            android:textSize="12sp"
+                            android:textColor="@color/colorOnSurfaceVariant"/>
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="CALL"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorPrimary"
+                        android:letterSpacing="0.08"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- BFP -->
+            <androidx.cardview.widget.CardView
+                xmlns:card3="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                card3:cardCornerRadius="16dp"
+                card3:cardElevation="3dp"
+                card3:cardBackgroundColor="@color/colorSurface"
+                android:layout_marginBottom="24dp">
+
+                <LinearLayout
+                    android:id="@+id/btnCallBFP"
+                    android:layout_width="match_parent"
+                    android:layout_height="64dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:contentDescription="Call 160 Bureau of Fire Protection">
+
+                    <TextView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:gravity="center"
+                        android:text="🔥"
+                        android:textSize="22sp"
+                        android:background="@drawable/bg_hotline_icon_light"/>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_marginStart="14dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="160 — Bureau of Fire"
+                            android:textSize="15sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorOnSurface"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Fire emergencies &amp; prevention"
+                            android:textSize="12sp"
+                            android:textColor="@color/colorOnSurfaceVariant"/>
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="CALL"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorWarning"
+                        android:letterSpacing="0.08"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- My Emergency Contact -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="MY EMERGENCY CONTACT"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                android:textColor="@color/colorPrimary"
+                android:letterSpacing="0.12"
+                android:layout_marginBottom="12dp"/>
+
+            <androidx.cardview.widget.CardView
+                xmlns:card4="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                card4:cardCornerRadius="16dp"
+                card4:cardElevation="3dp"
+                card4:cardBackgroundColor="@color/colorSurface"
+                android:layout_marginBottom="24dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginBottom="16dp">
+
+                        <TextView
+                            android:layout_width="44dp"
+                            android:layout_height="44dp"
+                            android:gravity="center"
+                            android:text="👤"
+                            android:textSize="22sp"
+                            android:background="@drawable/bg_hotline_icon_light"
+                            android:layout_marginEnd="14dp"/>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tvEmergencyContactName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Not set"
+                                android:textSize="17sp"
+                                android:textStyle="bold"
+                                android:textColor="@color/colorOnSurface"
+                                android:layout_marginBottom="2dp"/>
+
+                            <TextView
+                                android:id="@+id/tvEmergencyContactPhone"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Add one in your Profile"
+                                android:textSize="13sp"
+                                android:textColor="@color/colorOnSurfaceVariant"/>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/btnCallPersonal"
+                        android:layout_width="match_parent"
+                        android:layout_height="52dp"
+                        android:orientation="horizontal"
+                        android:gravity="center"
+                        android:background="@drawable/bg_call_button"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:contentDescription="Call personal emergency contact">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="📞  Call My Emergency Contact"
+                            android:textSize="15sp"
+                            android:textStyle="bold"
+                            android:textColor="#FFFFFF"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Safety Tips -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SAFETY TIPS"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                android:textColor="@color/colorPrimary"
+                android:letterSpacing="0.12"
+                android:layout_marginBottom="12dp"/>
+
+            <androidx.cardview.widget.CardView
+                xmlns:card5="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                card5:cardCornerRadius="16dp"
+                card5:cardElevation="2dp"
+                card5:cardBackgroundColor="@color/colorPrimaryLighter"
+                android:layout_marginBottom="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="• Stay calm and find a safe place to stop.\n\n• Share your location with someone you trust before traveling.\n\n• If you cannot speak, texting 911 may be available.\n\n• Use the Resources tab to find the nearest hospital.\n\n• If you feel unsafe, stay in a public area with other people."
+                        android:textSize="14sp"
+                        android:textColor="@color/colorOnSurface"
+                        android:lineSpacingExtra="5dp"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Bottom nav ALWAYS at bottom -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorSurface"
+        app:menu="@menu/bottom_nav_menu"
+        app:labelVisibilityMode="labeled"
+        app:itemIconTint="@color/nav_icon_color"
+        app:itemTextColor="@color/nav_text_color"
+        app:elevation="8dp"/>
+
+</LinearLayout>

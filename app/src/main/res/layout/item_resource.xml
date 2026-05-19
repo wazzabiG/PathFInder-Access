@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="16dp"
+    android:layout_marginEnd="16dp"
+    android:layout_marginBottom="12dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="2dp"
+    app:cardBackgroundColor="@color/colorSurface">
+
+    <!-- Left accent bar (green, since resources = positive) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <View
+            android:layout_width="4dp"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimary" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/tvResourceType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                android:textColor="@color/colorPrimary"
+                android:letterSpacing="0.06"
+                android:layout_marginBottom="4dp" />
+
+            <TextView
+                android:id="@+id/tvResourceName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:textColor="@color/colorOnSurface"
+                android:layout_marginBottom="4dp" />
+
+            <TextView
+                android:id="@+id/tvResourceAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="13sp"
+                android:textColor="@color/colorOnSurfaceVariant"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:id="@+id/tvResourceDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textColor="@color/colorOnSurface"
+                android:lineSpacingExtra="3dp"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:id="@+id/tvResourceFeatures"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="13sp"
+                android:textColor="@color/colorSuccess"
+                android:layout_marginBottom="12dp" />
+
+            <!-- Button row -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <Button
+                    android:id="@+id/btnCall"
+                    android:layout_width="0dp"
+                    android:layout_height="46dp"
+                    android:layout_weight="1"
+                    android:text="📞  Call"
+                    android:textSize="15sp"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:textColor="#FFFFFF"
+                    android:contentDescription="Call this facility"/>
+
+                <Button
+                    android:id="@+id/btnLocation"
+                    android:layout_width="0dp"
+                    android:layout_height="46dp"
+                    android:layout_weight="1"
+                    android:layout_marginStart="8dp"
+                    android:text="📍  Location"
+                    android:textSize="15sp"
+                    android:backgroundTint="@color/colorSecondary"
+                    android:textColor="#FFFFFF"
+                    android:contentDescription="Open in maps"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

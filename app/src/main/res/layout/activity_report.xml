@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorBackground">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Header: orange (not red, since this is a report not an emergency) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_report_header"
+            android:padding="20dp"
+            android:orientation="vertical"
+            android:elevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="14dp">
+
+                <ImageView
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:src="@drawable/ic_compass"
+                    app:tint="#FFFFECDA"
+                    android:scaleType="centerInside"
+                    android:layout_marginEnd="8dp"
+                    android:contentDescription="Pathfinder Access logo"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="PATHFINDER ACCESS"
+                    android:textSize="10sp"
+                    android:textColor="#FFECDA"
+                    android:letterSpacing="0.14"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="⚠️ Report a Barrier"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:layout_marginBottom="4dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Help others by reporting accessibility barriers"
+                android:textSize="13sp"
+                android:textColor="#FFFDE7" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="BARRIER TYPE"
+                android:textSize="11sp" android:textStyle="bold"
+                android:textColor="@color/colorSecondary" android:letterSpacing="0.10"
+                android:layout_marginBottom="8dp" />
+
+            <Spinner
+                android:id="@+id/spinnerCategory"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:background="@drawable/bg_input_field_orange"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:layout_marginBottom="24dp"
+                android:contentDescription="Select the type of barrier" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="LOCATION"
+                android:textSize="11sp" android:textStyle="bold"
+                android:textColor="@color/colorSecondary" android:letterSpacing="0.10"
+                android:layout_marginBottom="8dp" />
+
+            <EditText
+                android:id="@+id/edittextBarrierLocation"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:hint="e.g., SM City Cebu, Main Entrance"
+                android:textSize="16sp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:background="@drawable/bg_input_field_orange"
+                android:layout_marginBottom="24dp"
+                android:contentDescription="Enter the location of the barrier" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="DESCRIPTION"
+                android:textSize="11sp" android:textStyle="bold"
+                android:textColor="@color/colorSecondary" android:letterSpacing="0.10"
+                android:layout_marginBottom="8dp" />
+
+            <EditText
+                android:id="@+id/edittextBarrierDescription"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:hint="Describe the issue clearly. The more detail, the more helpful!"
+                android:textSize="16sp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:paddingTop="12dp"
+                android:gravity="top|start"
+                android:background="@drawable/bg_input_field_orange"
+                android:inputType="textMultiLine"
+                android:layout_marginBottom="32dp"
+                android:contentDescription="Describe the accessibility barrier in detail" />
+
+            <Button
+                android:id="@+id/buttonSubmitReport"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:text="Submit to Community"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:backgroundTint="@color/colorSecondary"
+                android:textColor="#FFFFFF"
+                android:contentDescription="Submit your accessibility barrier report" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Your report will appear in the community feed immediately."
+                android:textSize="13sp"
+                android:textColor="@color/colorOnSurfaceVariant"
+                android:gravity="center"
+                android:layout_marginTop="16dp"
+                android:lineSpacingExtra="4dp" />
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

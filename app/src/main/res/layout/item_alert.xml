@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="16dp"
+    android:layout_marginEnd="16dp"
+    android:layout_marginBottom="12dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="2dp"
+    app:cardBackgroundColor="@color/colorSurface">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <View
+            android:layout_width="4dp"
+            android:layout_height="match_parent"
+            android:background="@color/colorSecondary"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/tvAlertCategory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                android:textColor="@color/colorSecondary"
+                android:letterSpacing="0.06"
+                android:layout_marginBottom="4dp"/>
+
+            <TextView
+                android:id="@+id/tvAlertLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/colorOnSurface"
+                android:layout_marginBottom="6dp"/>
+
+            <TextView
+                android:id="@+id/tvAlertDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textColor="@color/colorOnSurfaceVariant"
+                android:lineSpacingExtra="4dp"
+                android:layout_marginBottom="12dp"/>
+
+            <!-- Upvote / Downvote row -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="8dp">
+
+                <TextView
+                    android:id="@+id/tvAlertMeta"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="12sp"
+                    android:textColor="@color/colorOnSurfaceVariant"/>
+
+                <Button
+                    android:id="@+id/btnUpvote"
+                    android:layout_width="wrap_content"
+                    android:layout_height="36dp"
+                    android:text="👍  0"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorSecondaryDark"
+                    android:backgroundTint="@color/colorSecondaryLighter"/>
+
+                <Button
+                    android:id="@+id/btnDownvote"
+                    android:layout_width="wrap_content"
+                    android:layout_height="36dp"
+                    android:text="👎  0"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorEmergency"
+                    android:backgroundTint="@color/colorEmergencyLight"
+                    android:layout_marginStart="8dp"/>
+            </LinearLayout>
+
+            <!-- Comment count row — tap to open comments -->
+            <LinearLayout
+                android:id="@+id/btnViewComments"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:background="@color/colorBackground"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:clickable="true"
+                android:focusable="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="💬"
+                    android:textSize="15sp"
+                    android:layout_marginEnd="6dp"/>
+
+                <TextView
+                    android:id="@+id/tvCommentCount"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="0 comments"
+                    android:textSize="13sp"
+                    android:textColor="@color/colorOnSurfaceVariant"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="View ›"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorPrimary"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

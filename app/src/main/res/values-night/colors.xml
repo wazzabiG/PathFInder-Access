@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Primary stays vibrant green, slightly lighter for dark bg -->
+    <color name="colorPrimary">#1A6B28</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorPrimaryMid">#23833B</color>
+    <color name="colorPrimaryLight">#79f27f</color>
+    <color name="colorPrimaryLighter">#1A2E1B</color>
+
+    <!-- Secondary: amber, slightly softened -->
+    <color name="colorSecondary">#FFB300</color>
+    <color name="colorSecondaryDark">#E65100</color>
+    <color name="colorSecondaryLight">#3A2E00</color>
+    <color name="colorSecondaryLighter">#2A2000</color>
+
+    <!-- Accent -->
+    <color name="colorAccent">#e3ff2b</color>
+    <color name="colorAccentDark">#C5E000</color>
+
+    <!-- Emergency / Danger -->
+    <color name="colorEmergency">#EF5350</color>
+    <color name="colorEmergencyLight">#2C1010</color>
+    <color name="colorDanger">#EF5350</color>
+    <color name="colorWarning">#FFB300</color>
+    <color name="colorSuccess">#66BB6A</color>
+    <color name="colorSuccessLight">#1A2E1B</color>
+
+    <!-- Dark surfaces -->
+    <color name="colorBackground">#0F1A10</color>
+    <color name="colorSurface">#1C2E1D</color>
+    <color name="colorSurfaceVariant">#243526</color>
+    <color name="colorOnSurface">#E8F5E9</color>
+    <color name="colorOnSurfaceVariant">#A5C8A8</color>
+    <color name="colorDivider">#2A3D2B</color>
+    <color name="colorInputBackground">#1A2A1B</color>
+    <color name="colorInputStroke">#4CAF50</color>
+
+    <!-- Bottom nav -->
+    <color name="colorNavSelected">#79f27f</color>
+    <color name="colorNavUnselected">#4A6B4C</color>
+
+    <!-- Header-->
+    <color name="colorGradientStart">#0F4A1A</color>
+    <color name="colorGradientMid">#1A6B28</color>
+    <color name="colorGradientEnd">#2E8B3A</color>
+</resources>

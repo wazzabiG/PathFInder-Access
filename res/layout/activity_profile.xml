@@ -1,0 +1,434 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorBackground">
+
+    <!-- Profile Header Banner -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_header_gradient"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:paddingTop="22dp"
+        android:paddingBottom="24dp"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:elevation="6dp">
+
+        <!-- Top branding row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="14dp">
+
+            <TextView
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:gravity="center"
+                android:text="&#9855;"
+                android:textSize="13sp"
+                android:background="#33FFFFFF"
+                android:layout_marginEnd="8dp"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="PATHFINDER ACCESS"
+                android:textSize="10sp"
+                android:textColor="#BAFFBE"
+                android:letterSpacing="0.14"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="MY PROFILE"
+                android:textSize="10sp"
+                android:textColor="#BAFFBE"
+                android:letterSpacing="0.10"
+                android:textStyle="bold"
+                android:background="#33FFFFFF"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"/>
+        </LinearLayout>
+
+        <!--
+            Tapping anywhere on the 96dp avatar circle opens the image picker.
+            Layers (back to front):
+              1. bg_avatar_circle  – the green ring background
+              2. profileAvatarImage – actual photo (scaleType=centerCrop once set)
+              3. camera-badge TextView – 📷 hint, bottom-right corner
+        -->
+        <FrameLayout
+            android:id="@+id/profileAvatarContainer"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:layout_marginBottom="14dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:contentDescription="Tap to change profile picture">
+
+            <!-- Circle background -->
+            <View
+                android:layout_width="96dp"
+                android:layout_height="96dp"
+                android:background="@drawable/bg_avatar_circle"/>
+
+            <!--
+                Profile photo.
+                Default src = person icon with no tint set here.
+                The activity sets a green tint on the icon via code and clears
+                it when a real photo is loaded, avoiding API-level inconsistencies
+                that arise from mixing android:tint with clearColorFilter().
+            -->
+            <ImageView
+                android:id="@+id/profileAvatarImage"
+                android:layout_width="96dp"
+                android:layout_height="96dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_nav_profile"
+                android:scaleType="centerCrop"
+                android:contentDescription="Profile picture"/>
+
+            <!-- Small camera badge overlaid at bottom-right -->
+            <TextView
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:layout_gravity="bottom|end"
+                android:gravity="center"
+                android:text="📷"
+                android:textSize="13sp"
+                android:background="#CC1F8D36"
+                android:padding="2dp"/>
+
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/profileFirstName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="4dp"/>
+
+        <!-- Mobility badge pill -->
+        <TextView
+            android:id="@+id/profileMobilityType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="13sp"
+            android:textColor="#1F8D36"
+            android:background="@drawable/bg_mobility_badge"
+            android:paddingStart="14dp"
+            android:paddingEnd="14dp"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"/>
+
+    </LinearLayout>
+
+    <!-- Scrollable content -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <!-- Community Contribution -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="COMMUNITY CONTRIBUTION"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                android:textColor="@color/colorPrimary"
+                android:letterSpacing="0.10"
+                android:layout_marginBottom="10dp"/>
+
+            <androidx.cardview.widget.CardView
+                xmlns:card="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                card:cardCornerRadius="16dp"
+                card:cardElevation="2dp"
+                card:cardBackgroundColor="@color/colorPrimaryLighter"
+                android:layout_marginBottom="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="16dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:gravity="center"
+                        android:text="🗺️"
+                        android:textSize="22sp"
+                        android:background="@drawable/bg_hotline_icon_light"
+                        android:layout_marginEnd="14dp"/>
+
+                    <TextView
+                        android:id="@+id/tvMyReports"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textSize="15sp"
+                        android:textColor="@color/colorPrimary"
+                        android:textStyle="bold"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Contact Information -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CONTACT INFORMATION"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                android:textColor="@color/colorPrimary"
+                android:letterSpacing="0.10"
+                android:layout_marginBottom="10dp"/>
+
+            <androidx.cardview.widget.CardView
+                xmlns:card2="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                card2:cardCornerRadius="16dp"
+                card2:cardElevation="2dp"
+                card2:cardBackgroundColor="@color/colorSurface"
+                android:layout_marginBottom="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <!-- Email row -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginBottom="12dp">
+
+                        <TextView
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                            android:gravity="center"
+                            android:text="✉️"
+                            android:textSize="18sp"
+                            android:layout_marginEnd="12dp"/>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Email"
+                                android:textSize="11sp"
+                                android:textColor="@color/colorOnSurfaceVariant"
+                                android:textStyle="bold"
+                                android:letterSpacing="0.05"
+                                android:layout_marginBottom="2dp"/>
+                            <TextView
+                                android:id="@+id/profileEmail"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="15sp"
+                                android:textColor="@color/colorOnSurface"/>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!-- Divider -->
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/colorDivider"
+                        android:layout_marginBottom="12dp"/>
+
+                    <!-- Phone row -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                            android:gravity="center"
+                            android:text="📱"
+                            android:textSize="18sp"
+                            android:layout_marginEnd="12dp"/>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Phone"
+                                android:textSize="11sp"
+                                android:textColor="@color/colorOnSurfaceVariant"
+                                android:textStyle="bold"
+                                android:letterSpacing="0.05"
+                                android:layout_marginBottom="2dp"/>
+                            <TextView
+                                android:id="@+id/profilePhone"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="15sp"
+                                android:textColor="@color/colorOnSurface"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Emergency Contact -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="EMERGENCY CONTACT"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                android:textColor="@color/colorPrimary"
+                android:letterSpacing="0.10"
+                android:layout_marginBottom="10dp"/>
+
+            <androidx.cardview.widget.CardView
+                xmlns:card3="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                card3:cardCornerRadius="16dp"
+                card3:cardElevation="2dp"
+                card3:cardBackgroundColor="@color/colorSurface"
+                android:layout_marginBottom="24dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:gravity="center"
+                        android:text="🆘"
+                        android:textSize="18sp"
+                        android:layout_marginEnd="12dp"/>
+
+                    <TextView
+                        android:id="@+id/profileEmergencyContact"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textSize="15sp"
+                        android:textColor="@color/colorOnSurface"
+                        android:lineSpacingExtra="4dp"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:id="@+id/btnEditProfile"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:background="@drawable/bg_call_button"
+                android:clickable="true"
+                android:focusable="true"
+                android:layout_marginBottom="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Edit Profile"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="#FFFFFF"/>
+            </LinearLayout>
+
+            <!-- Settings button -->
+            <LinearLayout
+                android:id="@+id/btnSettings"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:background="@drawable/bg_settings_button"
+                android:clickable="true"
+                android:focusable="true"
+                android:layout_marginBottom="12dp"
+                android:contentDescription="Open settings">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="⚙   Settings"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="#FFFFFF"/>
+            </LinearLayout>
+
+            <!-- Logout button -->
+            <LinearLayout
+                android:id="@+id/buttonLogout"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:background="@drawable/bg_logout_button"
+                android:clickable="true"
+                android:focusable="true"
+                android:contentDescription="Sign out">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sign Out"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="#D32F2F"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Bottom nav ALWAYS at bottom -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorSurface"
+        app:menu="@menu/bottom_nav_menu"
+        app:labelVisibilityMode="labeled"
+        app:itemIconTint="@color/nav_icon_color"
+        app:itemTextColor="@color/nav_text_color"
+        app:elevation="8dp"/>
+
+</LinearLayout>

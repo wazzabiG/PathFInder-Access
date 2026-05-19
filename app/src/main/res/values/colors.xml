@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Primary: Vibrant green palette -->
+    <color name="colorPrimary">#2E8B3A</color>
+    <color name="colorPrimaryDark">#1A6B28</color>
+    <color name="colorPrimaryMid">#3A9E48</color>
+    <color name="colorPrimaryLight">#79f27f</color>
+    <color name="colorPrimaryLighter">#E8F8EA</color>
+
+    <!-- Secondary: Warm amber -->
+    <color name="colorSecondary">#CD8D02</color>
+    <color name="colorSecondaryDark">#A57000</color>
+    <color name="colorSecondaryLight">#FFF0C0</color>
+    <color name="colorSecondaryLighter">#FFF8E0</color>
+
+    <!-- Accent: Lime yellow -->
+    <color name="colorAccent">#e3ff2b</color>
+    <color name="colorAccentDark">#C5E000</color>
+
+    <!-- Emergency / Danger -->
+    <color name="colorEmergency">#D32F2F</color>
+    <color name="colorEmergencyLight">#FFEBEE</color>
+    <color name="colorDanger">#D32F2F</color>
+    <color name="colorWarning">#fac248</color>
+    <color name="colorSuccess">#2E8B3A</color>
+    <color name="colorSuccessLight">#C8F0CB</color>
+
+    <!-- Neutral surfaces -->
+    <color name="colorBackground">#F2FAF3</color>
+    <color name="colorSurface">#FFFFFF</color>
+    <color name="colorSurfaceVariant">#F0F6F1</color>
+    <color name="colorOnSurface">#1A2E1C</color>
+    <color name="colorOnSurfaceVariant">#4A5E4C</color>
+    <color name="colorDivider">#D4EDD7</color>
+    <color name="colorInputBackground">#F5FAF6</color>
+    <color name="colorInputStroke">#79f27f</color>
+
+    <!-- Bottom nav -->
+    <color name="colorNavSelected">#2E8B3A</color>
+    <color name="colorNavUnselected">#9ABDA0</color>
+
+    <!-- Header-->
+    <color name="colorGradientStart">#23833B</color>
+    <color name="colorGradientMid">#11B527</color>
+    <color name="colorGradientEnd">#6DE851</color>
+</resources>

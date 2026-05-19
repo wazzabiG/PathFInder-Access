@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.pacaldo_proj">
+
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- Required on Android 13+ (API 33) to read images from external storage -->
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="PathFinder"
+        android:theme="@style/Theme.PACALDO_MVP">
+
+        <activity
+            android:name=".screens.splash.SplashActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".screens.login.LoginActivity" />
+        <activity android:name=".screens.register.RegisterActivity" />
+        <activity android:name=".screens.dashboard.DashboardActivity" />
+        <activity android:name=".screens.profile.ProfileActivity" />
+        <activity android:name=".screens.report.ReportActivity" />
+        <activity android:name=".screens.resources.ResourcesActivity" />
+        <activity android:name=".screens.emergency.EmergencyActivity" />
+        <activity android:name=".screens.settings.SettingsActivity" />
+        <activity android:name=".screens.profile.EditProfileActivity" />
+        <activity android:name=".screens.dashboard.CommentsActivity"/>
+
+    </application>
+</manifest>

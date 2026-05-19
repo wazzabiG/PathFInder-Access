@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_header_gradient"
+            android:padding="20dp"
+            android:elevation="4dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="⚙  SETTINGS"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <!-- Display section -->
+            <TextView
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="DISPLAY"
+                android:textSize="11sp" android:textStyle="bold"
+                android:textColor="@color/colorPrimary" android:letterSpacing="0.10"
+                android:layout_marginBottom="16dp" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                card:cardCornerRadius="16dp"
+                card:cardElevation="2dp"
+                card:cardBackgroundColor="@color/colorSurface"
+                android:layout_marginBottom="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:id="@+id/tvTextSizeLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp"
+                        android:text="Text Size: Normal"
+                        android:textColor="@color/colorOnSurface"
+                        android:textSize="16sp" />
+
+                    <SeekBar
+                        android:id="@+id/seekbarTextSize"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_marginBottom="8dp"
+                        android:contentDescription="Adjust text size"
+                        android:max="3" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="16dp"
+                        android:background="@color/colorDivider" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Dark Mode"
+                            android:textColor="@color/colorOnSurface"
+                            android:textSize="16sp" />
+
+                        <Switch
+                            android:id="@+id/switchDarkMode"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:contentDescription="Toggle dark mode" />
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Notifications section -->
+            <TextView
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="NOTIFICATIONS"
+                android:textSize="11sp" android:textStyle="bold"
+                android:textColor="@color/colorPrimary" android:letterSpacing="0.10"
+                android:layout_marginBottom="16dp" />
+
+            <androidx.cardview.widget.CardView
+                xmlns:card2="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                card2:cardCornerRadius="16dp"
+                card2:cardElevation="2dp"
+                card2:cardBackgroundColor="@color/colorSurface"
+                android:layout_marginBottom="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Community Alert Notifications"
+                        android:textSize="16sp"
+                        android:textColor="@color/colorOnSurface" />
+
+                    <Switch
+                        android:id="@+id/switchNotifications"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="Toggle notifications" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- About section -->
+            <TextView
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="ABOUT"
+                android:textSize="11sp" android:textStyle="bold"
+                android:textColor="@color/colorPrimary" android:letterSpacing="0.10"
+                android:layout_marginBottom="16dp" />
+
+            <androidx.cardview.widget.CardView
+                xmlns:card3="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                card3:cardCornerRadius="16dp"
+                card3:cardElevation="2dp"
+                card3:cardBackgroundColor="@color/colorSurface">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:text="PathFinder Access v2.0\n\nBuilt for people with mobility challenges, the elderly, and those who need accessible routes.\n\nReport accessibility barriers, discover nearby accessible resources, and keep emergency help just one tap away."
+                    android:textSize="14sp"
+                    android:textColor="@color/colorOnSurfaceVariant"
+                    android:lineSpacingExtra="4dp" />
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Base.Theme.PACALDO_MVP" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryVariant">@color/colorPrimaryDark</item>
+        <item name="colorSecondary">@color/colorSecondary</item>
+        <item name="colorSecondaryVariant">@color/colorSecondaryDark</item>
+        <item name="android:colorBackground">@color/colorBackground</item>
+        <item name="colorSurface">@color/colorSurface</item>
+        <item name="colorError">@color/colorDanger</item>
+        <item name="android:statusBarColor">#0F1A10</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:navigationBarColor">@color/colorSurface</item>
+    </style>
+
+    <style name="Theme.PACALDO_MVP" parent="Base.Theme.PACALDO_MVP" />
+
+    <!-- Rounded input field style -->
+    <style name="InputField">
+        <item name="android:background">@drawable/bg_input_field</item>
+        <item name="android:paddingStart">16dp</item>
+        <item name="android:paddingEnd">16dp</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/colorOnSurface</item>
+        <item name="android:textColorHint">@color/colorOnSurfaceVariant</item>
+    </style>
+
+    <!-- Section label style -->
+    <style name="SectionLabel">
+        <item name="android:textSize">11sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:letterSpacing">0.10</item>
+        <item name="android:layout_marginBottom">12dp</item>
+    </style>
+
+    <!-- Primary button -->
+    <style name="PrimaryButton">
+        <item name="android:backgroundTint">@color/colorPrimary</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <!-- Orange/accent button -->
+    <style name="AccentButton">
+        <item name="android:backgroundTint">@color/colorSecondary</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+</resources>
